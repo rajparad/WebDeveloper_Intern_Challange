@@ -1,8 +1,0 @@
-mutation model_update($object: CustomizationInputType!, $id: ID!) {
-  object: model_update(
-    id: $id
-    model: $object
-  ){
-    id properties
-  }
-}

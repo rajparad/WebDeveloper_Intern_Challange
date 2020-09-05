@@ -1,45 +1,34 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
-const brandColors = {
-  green: '#2b322b',
-};
-
 const systemColors = {
-  blue: '#007aff',
+  darkblue: '#343D4B',
+  lightblue: 'rgba(133, 137, 160, 0.3)',
+  lightgrey: '#F5F6FC',
 };
 
 module.exports = {
-  purge: {
-    content: ['app/**/*.liquid', 'modules/**/*.liquid', './src/js/**/*.js'],
-  },
-  future: {
-    removeDeprecatedGapUtilities: true
-  },
   theme: {
-    container: {
-      center: true,
-      padding: {
-        default: '1rem',
-        sm: '1rem',
-        lg: '0',
-        xl: '0',
-      },
-    },
     extend: {
       colors: {
-        // `ex` prefix will create classes like `text-ex-red`
         ex: {
-          ...brandColors,
-          ...systemColors,
-        },
+          ...systemColors
+        }
       },
-      // fontFamily: {
-      //   sans: ['Lato', ...defaultTheme.fontFamily.sans],
-      // },
+      fontFamily: {
+        sans: ['Gotham', ...defaultTheme.fontFamily.sans]
+      },
+      screens: {
+        xxl: '1410px'
+      },
+      height: {
+        '96': '24rem',
+        '128': '32rem',
+        '256': '64rem'
+      }
     },
   },
   variants: {
-    borderWidth: ['responsive', 'hover'],
+    borderWidth: ['responsive', 'hover']
   },
-  plugins: [require('@tailwindcss/custom-forms')],
+  plugins: [require('@tailwindcss/custom-forms')]
 };

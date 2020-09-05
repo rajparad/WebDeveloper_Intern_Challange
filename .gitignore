@@ -1,7 +1,9 @@
-.marketplace-kit
+# General
+node_modules/
+.env
+
+# OS junk
+.DS_Store
+
 .pos
 tmp/
-/node_modules/
-.DS_Store
-app/assets/css/*.css
-app/assets/js/*.js

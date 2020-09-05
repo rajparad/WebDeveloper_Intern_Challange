@@ -1,7 +1,0 @@
-mutation model_create($object: CustomizationInputType!) {
-  object: model_create(
-    model: $object
-  ){
-    id properties
-  }
-}

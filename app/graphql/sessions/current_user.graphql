@@ -1,6 +1,0 @@
-query{
-  user: current_user{
-    email
-    id
-  }
-}

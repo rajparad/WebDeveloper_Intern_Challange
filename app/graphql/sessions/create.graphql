@@ -1,6 +1,0 @@
-mutation session_create($email: String!, $password: String!){
-   user: user_session_create(email: $email, password: $password){
-    id
-    email
-  }
-}
