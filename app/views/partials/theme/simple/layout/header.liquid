@@ -1,0 +1,36 @@
+<header class=" ">
+  <div class="container flex flex-col flex-wrap items-center py-5 mx-auto md:flex-row">
+    <a class="flex items-center mb-4 font-medium text-gray-900 md:mb-0" href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="2" class="w-10 h-10 p-2 text-white bg-blue-500 rounded-full"
+        viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">{{ 'app.title' | t }}</span>
+    </a>
+
+    <nav class="flex flex-wrap items-center justify-center text-base md:ml-auto">
+      <a href="/items/new" class="mr-5 hover:text-gray-900">{{ 'app.list-your-item' | t }}</a>
+
+      {% if context.current_user.id  %}
+      <a href="/dashboard" class="mr-5 hover:text-gray-900">{{ 'app.dashboard' | t }}</a>
+      {% assign superadmins = context.constants.superadmins | split: ',' %}
+      {% if superadmins contains context.current_user.email %}
+        <a href="/admin" class="mr-5 hover:text-gray-900">{{ 'app.admin' | t }}</a>
+      {% endif %}
+
+      <form action="/sessions/destroy" method="post">
+        {% include 'authenticity_token' %}
+        <button class="button button-secondary button-sm">
+          Log out
+        </button>
+      </form>
+      {% else %}
+      <a href="/sessions/new" class="button button-sm">
+        {{ 'app.login' | t }}
+      </a>
+      {% endif %}
+    </nav>
+
+  </div>
+</header>

@@ -1,0 +1,18 @@
+mutation create_item($name: String!, $description: String, $tags: [String], $owner: String!, $category: String, $price: Int!, $uuid: String!) {
+  model_create(
+    model: {
+      model_schema_name: "item"
+      properties: [
+        { name: "uuid" value: $uuid }
+        { name: "name" value: $name }
+        { name: "description" value: $description }
+        { name: "tags" value_array: $tags }
+        { name: "owner" value: $owner }
+        { name: "category" value: $category }
+        { name: "price" value_int: $price }
+      ]
+    }
+  ){
+    id properties
+  }
+}

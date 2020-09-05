@@ -1,0 +1,41 @@
+<div class="flex flex-wrap my-6">
+  <div class="w-full md:flex-1 md:w-auto">
+    <label for="k" class="block mb-1 capitalize">{{ 'app.search.keywords' | t  }}</label>
+    <input class="w-full form-input"
+      name="k"
+      id="k"
+      type="text"
+      value="{{ filters.query.k }}"
+     />
+  </div>
+
+  <div class="w-full my-6 md:my-0 md:ml-6 md:w-auto">
+    <label for="category" class="block mb-1 capitalize">{{ 'app.search.category' | t  }}</label>
+    <select class="w-full form-select" id="category" name="category">
+      <option value="" class="">{{ 'app.search.all_categories' | t }}</option>
+      {% for category in filters.categories %}
+        {% assign ident = category | split: '/' | size | minus: 1 | times: 2 %}
+        <option value="{{ category }}" {% if filters.query.category == category %}selected{% endif %}>
+          {% for step in (1..ident) %} {{ "&nbsp;" }} {% endfor %}
+          {{ 'categories.' | append: category | t }}
+        </option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="w-full my-6 md:my-0 md:mx-6 md:w-auto">
+    <label for="sort" class="block mb-1 capitalize">{{ 'app.search.sort_by' | t }}</label>
+    <select class="w-full form-select" id="sort" name="sort">
+      {% assign sort = filters.query.sort | default: 'relevance' %}
+      {% for s in filters.sort_options %}
+        <option value="{{ s[0] }}" {% if sort == s[0] %}selected{% endif %}>{{ s[1] }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <button name="submit" value="search" class="w-full md:mt-auto md:w-auto button">{{ 'app.search.search' | t  }}</button>
+</div>
+
+<p class="text-lg text-gray-700">
+  {{ 'app.total_entries' | t }} {{ items.total_entries }}
+</p>

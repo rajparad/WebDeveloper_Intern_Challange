@@ -1,0 +1,41 @@
+{% assign s = section %}
+
+<div class="w-full">
+  <ul class="flex mb-5 text-lg text-gray-900">
+    <li>
+      <a class="mr-2 px-3 py-2 {% if s == 'home' %}bg-gray-200{% endif %}" href='/admin'>
+        {{ 'admin.menu.home' | t }}
+      </a>
+    </li>
+    <li>
+      <a class="mr-2 px-3 py-2 {% if s == 'users' %}bg-gray-200{% endif %}" href='/admin/users'>
+        {{ 'admin.menu.users' | t }}
+      </a>
+    </li>
+    <li>
+      <a class="mr-2 px-3 py-2 {% if s == 'orders' %}bg-gray-200{% endif %}" href='/admin/orders'>
+        {{ 'admin.menu.orders' | t }}
+      </a>
+    </li>
+    <li>
+      <a class="mr-2 px-3 py-2 {% if s == 'items' %}bg-gray-200{% endif %}" href='/admin/items'>
+        {{ 'admin.menu.items' | t }}
+      </a>
+    </li>
+    <li>
+      <a class="mr-2 px-3 py-2 {% if s == 'categories' %}bg-gray-200{% endif %}" href='/admin/categories'>
+        {{ 'admin.menu.categories' | t }}
+      </a>
+    </li>
+    <li>
+      <a class="mr-2 px-3 py-2 {% if s == 'activities' %}bg-gray-200{% endif %}" href='/admin/activities'>
+        {{ 'admin.menu.activities' | t }}
+      </a>
+    </li>
+    <li>
+      <a class="mr-2 px-3 py-2 {% if s == 'setup' %}bg-gray-200{% endif %}" href='/marketplace_setup'>
+        {{ 'admin.menu.setup' | t }}
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,27 @@
+<table class="table w-full text-sm table-auto">
+  <thead>
+    <tr>
+      <th class="text-lg font-normal text-left">{{ 'app.items.attr.name' | t }}</th>
+      <th class="text-lg font-normal text-left">{{ 'app.items.attr.category' | t }}</th>
+      <th class="text-lg font-normal text-left">{{ 'app.items.attr.created_at' | t }}</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for record in list.results %}
+      <tr>
+        <td class="text-left">
+          <a href="/items/{{ record.id }}">
+            {{ record.name }}
+          </a>
+        </td>
+        <td class="text-left">
+          {{ record.category }}
+        </td>
+        <td class="text-left">
+          {{ record.created_at }}
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

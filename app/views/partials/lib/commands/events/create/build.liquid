@@ -1,0 +1,19 @@
+{% parse_json object %}
+  {
+    "type": {{ type | json }},
+    "object": {
+      "id": {{ object_id | json }}
+    },
+    "actor": {
+      "id": {{ actor_id | json }}
+    },
+    "target": {
+      "id": {{ target_id | json }}
+    },
+    "date": {{ 'now' | to_time | json }}
+  }
+{%  endparse_json %}
+
+{% liquid
+  return_rc object
+%}

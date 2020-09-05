@@ -1,0 +1,10 @@
+{% comment %}
+  @params
+    uuid
+{% endcomment %}
+
+{% liquid
+  function_rc object = 'lib/commands/activities/publish/build', uuid: uuid, type: type, ids: ids
+  function_rc object = 'lib/commands/activities/publish/check', object: object
+  function_rc object = 'lib/commands/activities/publish/execute', object: object
+%}

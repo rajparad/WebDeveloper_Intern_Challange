@@ -1,0 +1,14 @@
+body {
+  @apply antialiased;
+}
+
+/* purgecss start ignore */
+main a[href] {
+  @apply text-blue-700;
+}
+
+main a[href]:hover {
+  @apply text-blue-600;
+}
+/* purgecss end ignore */
+

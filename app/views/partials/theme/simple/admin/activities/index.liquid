@@ -1,0 +1,42 @@
+<table class="table w-full text-sm table-auto">
+  <thead>
+    <tr>
+      <th class="text-lg font-normal text-left">
+        {{ 'app.activities.attr.created_at' | t }}
+      </th>
+      <th class="text-lg font-normal text-left">
+        {{ 'app.activities.attr.type' | t }}
+      </th>
+      <th class="text-lg font-normal text-left">
+        {{ 'app.activities.attr.actor' | t }}
+      </th>
+      <th class="text-lg font-normal text-left">
+        {{ 'app.activities.attr.object' | t }}
+      </th>
+      <th class="text-lg font-normal text-left">
+        {{ 'app.activities.attr.target' | t }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for record in list.results %}
+      <tr>
+        <td class="text-left">
+          {{ record.payload.date }}
+        </td>
+        <td class="text-left">
+          {{ record.payload.type }}
+        </td>
+        <td class="text-left">
+          {{ record.payload.actor.id }}
+        </td>
+        <td class="text-left">
+          {{ record.payload.object.id }}
+        </td>
+        <td class="text-left">
+          {{ record.payload.target.id }}
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
