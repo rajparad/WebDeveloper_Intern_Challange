@@ -1,0 +1,69 @@
+body{
+    background-image: url("https://images7.alphacoders.com/704/thumb-1920-704346.jpg");
+     background-repeat : no-repeat;
+      background-size: auto ;
+  
+}
+
+.body1{
+  background-image: url("https://www.onlygfx.com/wp-content/uploads/2017/01/black-wallpaper-4.jpg");
+   background-repeat :repeat;
+
+    background-size:  100%;
+  color:white;
+      font-family: "Lucida Console", Courier, monospace;
+
+}
+
+.thanks{
+  background-image: url("https://www.onlygfx.com/wp-content/uploads/2017/01/black-wallpaper-4.jpg");
+  background-repeat :repeat;
+ 
+     background-size:  100%;
+  font-family: "Lucida Console", Courier, monospace;
+   text-align: center;
+ color:black;
+}
+
+.information{
+
+    font-family: "Lucida Console", Courier, monospace;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 9em;
+    color:white;
+}
+
+
+
+
+.box    {
+
+    padding: 0;
+  height: 30px;
+  position: relative;
+  left: 0;
+  outline: none;
+ 
+  border-color: rgba(0, 0, 0, .15);
+ 
+  font-size: 16px;
+
+  margin:0px auto;
+}
+
+.button {
+  
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+  
+  
+}

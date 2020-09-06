@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hello world! | platformOS Demo instance</title>
+  <link rel="stylesheet" href="{{ 'styles/app.css' | asset_url }}">
+</head>
+
+<body>
+{{ 'app.js' | asset_url | script_tag }}
+</body>
+
+
+
+
+  <h1 class = "information">
+    <label for="customerEmail">Enter your Email Address for confirmation</label>
+    <input type="email"
+      name="customer[email]"
+      id="customerEmail"
+      autocorrect="off"
+      autocapitalize="off"
+      autocomplete="email">
+    
+      <button onclick="restart()" class="button">
+      Hi</button>
+
+      </h1>
+
+
+
+
+
+
+
+
+
+    
+
+</html>
+
