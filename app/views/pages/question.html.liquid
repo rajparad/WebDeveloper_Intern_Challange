@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hello world! | platformOS Demo instance</title>
-  <link rel="stylesheet" href="{{ 'styles/app.css' | asset_url }}">
+  
+ <link rel="stylesheet" href="{{ 'styles/app.css' | asset_url }}">
 </head>
-
 <body>
-{{ 'app.js' | asset_url | script_tag }}
 
+<div class="body1">
 <h1>1.Do you have any of the symptoms or signs?
 </h1><br>
 <p>New or worsening cough</p>
@@ -103,7 +99,9 @@
 <input type="radio" id="cough" name="que10" value=cough">
 <label for="male">No</label><br>
 
+</div>
 
 
 
 </body>
+</html>
