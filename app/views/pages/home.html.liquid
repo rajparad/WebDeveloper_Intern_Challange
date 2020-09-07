@@ -9,23 +9,23 @@
 </head>
 
 <body>
-{{ 'app.js' | asset_url | script_tag }}
-</body>
+
+
 
 
 
 
   <h1 class = "information">
-    <label for="customerEmail">Enter your Email Address for confirmation</label>
+    <label for="customerEmail" >Enter your Email Address for confirmation</label>
     <input type="email"
       name="customer[email]"
       id="customerEmail"
       autocorrect="off"
       autocapitalize="off"
-      autocomplete="email">
-    
+      autocomplete="email" required>
+    <br>
       <button onclick="restart()" class="button">
-      Hi</button>
+      Submit</button>
 
       </h1>
 
@@ -33,11 +33,12 @@
 
 
 
-
+<script src="{{ 'scripts/app.js' | asset_url  }}">
+</script>
 
 
 
     
-
+</body>
 </html>
 
