@@ -1,6 +1,9 @@
 
 function restart() {
-    //window.location = "views/question.html.liquid";
-    document.console.log();("hi")
+    window.open = 'views/question.html.liquid';
+ 
   }
-
+  function restart13() {
+    window.open = 'views/thanks.html.liquid';
+ 
+  }
